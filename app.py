@@ -86,13 +86,9 @@ def generate_content_ideas(api_key, produk, mood, platform):
 # ----------------------------
 st.title("🍪 AI Content Idea & Caption Generator")
 st.caption("Prototype untuk Unicco Cookies — bagian dari solusi rekomendasi AI pemasaran")
-with st.sidebar:
-    st.subheader("Konfigurasi")
 
-    api_key_input = st.text_input(
-        "Gemini API Key",
-        type="password"
-    )
+api_key_input = st.secrets["GEMINI_API_KEY"]
+
 st.subheader("1. Masukkan detail konten")
 
 col1, col2 = st.columns(2)
